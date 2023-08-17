@@ -1,0 +1,51 @@
+# Include your custom_postgui HAL commands here
+# This file will not be overwritten when you run PNCconf again
+
+
+#net charge-pump		halui.charge-pump.		=>			[HMOT](CARD0).7i76.0.0.output-00
+#net dout-00			halui.dout-00			=>			[HMOT](CARD0).7i76.0.0.output-01
+#net dout-01			halui.dout-01			=>			[HMOT](CARD0).7i76.0.0.output-02
+#net dout-02			halui.dout-02			=>			[HMOT](CARD0).7i76.0.0.output-03
+
+
+
+# --- BOTH-HOME-X ---
+#net both-home-x		halui.both-home-x			<=			[HMOT](CARD0).7i76.0.0.input-04
+
+# --- MIN-HOME-Y ---
+#net both-home-y		halui.both-home-y		<=			[HMOT](CARD0).7i76.0.0.input-18
+
+# --- MIN-HOME-Z ---
+#net both-home-z		halui.both-home-z		<=			[HMOT](CARD0).7i76.0.0.input-19
+
+# --- DIN-00 ---
+#net absaugung			hm2_7i76.0.gpio.absaugung			<=			[HMOT](CARD0).0.gpio.001.in
+
+# --- DIN-01 ---
+#net din-01			halui.din-01			<=			[HMOT](CARD0).7i76.0.0.input-21
+
+# --- DIN-02 ---
+#net din-02			halui.din-02			<=			[HMOT](CARD0).7i76.0.0.input-22
+
+
+
+# ---digital potentionmeter output signals/setup---
+
+#net spindle-output	halui.spindle-output	=>			[HMOT](CARD0).7i76.0.0.spinout
+#net spindle-enable	halui.spindle-enable	=>			[HMOT](CARD0).7i76.0.0.spinena
+#net spindle-ccw		halui.spindle-ccw		=>			[HMOT](CARD0).7i76.0.0.spindir
+
+# ---setup spindle control signals---
+
+#net spindle-vel-cmd-rps        <=  spindle.0.speed-out-rps
+#net spindle-vel-cmd-rps-abs    <=  spindle.0.speed-out-rps-abs
+#net spindle-vel-cmd-rpm        <=  spindle.0.speed-out
+#net spindle-vel-cmd-rpm-abs    <=  spindle.0.speed-out-abs
+#net spindle-enable             <=  spindle.0.on
+#net spindle-cw                 <=  spindle.0.forward
+#net spindle-ccw                <=  spindle.0.reverse
+#net spindle-brake              <=  spindle.0.brake
+#net spindle-revs               =>  spindle.0.revs
+#net spindle-at-speed           =>  spindle.0.at-speed
+#net spindle-vel-fb-rps         =>  spindle.0.speed-in
+#net spindle-index-enable      <=>  spindle.0.index-enable
